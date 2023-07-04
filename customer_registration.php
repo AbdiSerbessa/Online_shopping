@@ -1,8 +1,6 @@
 <?php
 if (isset($_GET["register"])) {
-	
 	?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -19,7 +17,7 @@ if (isset($_GET["register"])) {
 	<div class="loader"></div>
 </div>
 	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">	
+		<div class="container-fluid">
 			<div class="navbar-header">
 				<a href="index.php" class="navbar-brand">MyStore | OnlineShopping</a>
 			</div>
@@ -46,7 +44,7 @@ if (isset($_GET["register"])) {
 				<div class="panel panel-primary">
 					<div class="panel-heading text-center">Customer Registration Form</div>
 					<div class="panel-body">
-					
+
 					<form id="signup_form" onsubmit="return false">
 						<div class="row">
 							<div class="col-md-6">
@@ -100,7 +98,6 @@ if (isset($_GET["register"])) {
 								<input style="width:100%;" value="Sign Up" type="submit" name="signup_button"class="btn btn-success btn-lg">
 							</div>
 						</div>
-						
 					</div>
 					</form>
 					<div class="panel-footer"></div>
@@ -113,9 +110,6 @@ if (isset($_GET["register"])) {
 </html>
 	<?php
 }
-
-
-
 ?>
 
 
