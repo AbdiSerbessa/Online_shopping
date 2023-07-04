@@ -1,9 +1,9 @@
 <?php
 include 'header.php';
 ?>
-     
-      <div class="main main-raised"> 
-        
+
+      <div class="main main-raised">
+
 		<div class="section">
 			<!-- container -->
 			<div class="container">
@@ -46,7 +46,7 @@ include 'header.php';
 							<h3 class="aside-title">Top selling</h3>
 							<div id="get_product_home">
 								<!-- product widget -->
-								
+
 								<!-- product widget -->
 							</div>
 						</div>
@@ -90,7 +90,7 @@ include 'header.php';
 							<div id="get_product" cid="1">
 							<!--Here we get product jquery Ajax Request-->
 						</div>
-							
+
 							<!-- /product -->
 						</div>
 						<!-- /store products -->
@@ -100,7 +100,7 @@ include 'header.php';
 							<span class="store-qty">Showing 20-100 products</span>
 							<ul class="store-pagination" id="pageno">
 								<li ><a class="active" href="#aside">1</a></li>
-								
+
 								<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
 							</ul>
 						</div>
@@ -114,6 +114,5 @@ include 'header.php';
 		</div>
 </div>
 <?php
-include "newslettter.php";
 include "footer.php";
 ?>
