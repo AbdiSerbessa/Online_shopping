@@ -2,7 +2,6 @@
 include "db.php";
 include "header.php";
 ?>
-
 <link href="css/myorders.css" rel="stylesheet"/>
 <section class="section main main-raised">
 	<div class="container-fluid ">
@@ -19,7 +18,6 @@ include "header.php";
                 if (isset($_SESSION["uid"])) {
                     $sql="SELECT c.order_id,a.product_id,a.product_title,a.product_price,a.product_image,b.qty,b.amt,c.total_amt FROM products a,order_products b,orders_info c WHERE a.product_id=b.product_id AND c.user_id='$_SESSION[uid]' AND b.order_id=c.order_id ORDER BY `c`.`order_id` DESC";
                     $query = mysqli_query($con,$sql);
-
                     //display cart item in dropdown menu
                     if (mysqli_num_rows($query) > 0) {
                         $prev_old = 0;
@@ -124,7 +122,6 @@ include "header.php";
                                     </div>
                                 ';
                             }
-
                         }
                     }else{
                     }
