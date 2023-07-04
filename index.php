@@ -61,7 +61,7 @@ if(isset($_SESSION["uid"])){
 									<div class="col-md-3">Sl.No</div>
 									<div class="col-md-3">Product Image</div>
 									<div class="col-md-3">Product Name</div>
-									<div class="col-md-3">Price in $.</div>
+									<div class="col-md-3">Price in .</div>
 								</div>-->
 								</div>
 							</div>
@@ -129,18 +129,7 @@ if(isset($_SESSION["uid"])){
 					<div class="panel-heading">Products</div>
 					<div class="panel-body">
 						<div id="get_product">
-							<!--Here we get product jquery Ajax Request-->
 						</div>
-						<!-- <div class="col-md-4">
-							<div class="panel panel-info">
-								<div class="panel-heading">Samsung Galaxy</div>
-								<div class="panel-body">
-									<img src="product_images/images.JPG"/>
-								</div>
-								<div class="panel-heading">.500.00
-									<button style="float:right;" class="btn btn-danger btn-xs">AddToCart</button>
-								</div>
-							</div> -->
 						</div>
 					</div>
 					<div class="panel-footer">&copy; <?php echo date("Y"); ?></div>
