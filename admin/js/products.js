@@ -121,7 +121,7 @@ $(document).ready(function(){
 			processData : false,
 			success : function(response){
 				console.log(response);
-				var resp = $.parseJSON(response);
+				let resp = JSON.parse(response);
 				if (resp.status == 202) {
 					$("#edit-product-form").trigger("reset");
 					$("#edit_product_modal").modal('hide');
