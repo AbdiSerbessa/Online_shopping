@@ -1,11 +1,17 @@
 <?php
 require "config/constants.php";
 ?>
+<section class="section">
+<div class="container-fluid">
+    <div id="cart_checkout">
+    </div>
+</div>
+</section>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>MyStoreApp | Cart</title>
+		<title>Store App | Cart</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<script src="js/jquery2.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -25,7 +31,7 @@ require "config/constants.php";
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand">MyStore | OnlineShopping</a>
+				<a href="#" class="navbar-brand">Store | OnlineShopping</a>
 			</div>
 		<div class="collapse navbar-collapse" id="collapse">
 			<ul class="nav navbar-nav">
@@ -73,7 +79,9 @@ require "config/constants.php";
 </html>
 
 
-
+<?php
+include "footer.php";
+?>
 
 
 
