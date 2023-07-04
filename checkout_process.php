@@ -17,7 +17,6 @@ if (isset($_SESSION["f_name"])) {
     $cardnumberstr=(string)$cardnumber;
     $total_count=$_POST['total_count'];
     $prod_total = $_POST['total_price'];
-
     $sql0="SELECT order_id from `orders_info`";
     $runquery=mysqli_query($con,$sql0);
     if (mysqli_num_rows($runquery) == 0) {
@@ -31,13 +30,11 @@ if (isset($_SESSION["f_name"])) {
         $order_id=$order_id+1;
         echo( mysqli_error($con));
     }
-
 	$sql = "INSERT INTO `orders_info`
 	(`order_id`,`user_id`,`f_name`, `email`,`address`,
 	`city`, `state`, `zip`, `cardname`,`cardnumber`,`expdate`,`prod_count`,`total_amt`,`cvv`)
 	VALUES ($order_id, '$user_id','$f_name','$email',
     '$address', '$city', '$state', '$zip','$cardname','$cardnumberstr','$expdate','$total_count','$prod_total','$cvv')";
-
     if(mysqli_query($con,$sql)){
         $i=1;
         $prod_id_=0;
