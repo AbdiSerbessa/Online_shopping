@@ -12,14 +12,13 @@ if (isset($_POST["login_user_with_product"])) {
 	$json_e = json_encode($product_list);
 	//here we are creating cookie and name of cookie is product_list
 	setcookie("product_list",$json_e,strtotime("+1 day"),"/","",null,TRUE);
-
 }
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>MyStoreApp | Login</title>
+		<title> StoreApp | Login</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<script src="js/jquery2.js"></script>
 		<script src="js/bootstrap.min.js"></script>
