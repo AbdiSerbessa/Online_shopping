@@ -1,6 +1,5 @@
 <?php
-//require "config/constants.php";
-
+require "config/constants.php";
 session_start();
 if(!isset($_SESSION["uid"])){
 	header("location:index.php");
@@ -21,7 +20,7 @@ if(!isset($_SESSION["uid"])){
 	</head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">	
+		<div class="container-fluid">
 			<div class="navbar-header">
 				<a href="#" class="navbar-brand">MyStore | OnlineShopping/a>
 			</div>
@@ -35,7 +34,6 @@ if(!isset($_SESSION["uid"])){
 	<p><br/></p>
 	<p><br/></p>
 	<div class="container-fluid">
-	
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
@@ -69,7 +67,6 @@ if(!isset($_SESSION["uid"])){
 								}
 							}
 						?>
-						
 					</div>
 					<div class="panel-footer"></div>
 				</div>
