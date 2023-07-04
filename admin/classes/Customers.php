@@ -39,11 +39,7 @@ class Customers
 		}
 		return ['status'=> 303, 'message'=> 'no orders yet'];
 	}
-	
-
 }
-
-
 
 if (isset($_POST["GET_CUSTOMERS"])) {
 	if (isset($_SESSION['admin_id'])) {
@@ -60,6 +56,5 @@ if (isset($_POST["GET_CUSTOMER_ORDERS"])) {
 		exit();
 	}
 }
-
 
 ?>

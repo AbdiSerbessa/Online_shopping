@@ -34,10 +34,6 @@ $(document).ready(function(){
 
 						$("#product_list").html(productHTML);
 					}
-
-					
-
-
 					var catSelectHTML = '<option value="">Select Category</option>';
 					$.each(resp.message.categories, function(index, value){
 
@@ -86,15 +82,13 @@ $(document).ready(function(){
 				}else if(resp.status == 303){
 					// window.location.href = "products.php";
 					alert(resp.message);
-					
+
 				}
 			}
 
 		});
 
 	});
-
-
 	$(document.body).on('click', '.edit-product', function(){
 
 		console.log($(this).find('span').text());
@@ -102,7 +96,6 @@ $(document).ready(function(){
 		var product = $.parseJSON($.trim($(this).find('span').text()));
 
 		console.log(product);
-
 		$("input[name='e_product_name']").val(product.product_title);
 		$("select[name='e_brand_id']").val(product.brand_id);
 		$("select[name='e_category_id']").val(product.cat_id);
@@ -168,7 +161,7 @@ $(document).ready(function(){
 		}else{
 			alert('Cancelled');
 		}
-		
+
 
 	});
 

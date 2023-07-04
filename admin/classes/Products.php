@@ -4,7 +4,6 @@ class Products
 {
 
 	private $con;
-
 	function __construct()
 	{
 		include_once("Database.php");
@@ -94,8 +93,6 @@ class Products
 		}
 
 	}
-
-
 	public function editProductWithImage($pid,
 										$product_name,
 										$brand_id,
@@ -151,7 +148,6 @@ class Products
 		}
 
 	}
-
 	public function editProductWithoutImage($pid,
 										$product_name,
 										$brand_id,
@@ -183,8 +179,6 @@ class Products
 		}
 
 	}
-
-
 	public function getBrands(){
 		$q = $this->con->query("SELECT * FROM brands");
 		$ar = [];
@@ -250,9 +244,6 @@ class Products
 		}
 
 	}
-
-
-
 	public function updateCategory($post = null){
 		extract($post);
 		if (!empty($cat_id) && !empty($e_cat_title)) {
@@ -297,9 +288,6 @@ class Products
 		}
 
 	}
-
-
-
 	public function updateBrand($post = null){
 		extract($post);
 		if (!empty($brand_id) && !empty($e_brand_title)) {
@@ -315,12 +303,7 @@ class Products
 		}
 
 	}
-
-
-
 }
-
-
 if (isset($_POST['GET_PRODUCT'])) {
 	if (isset($_SESSION['admin_id'])) {
 		$p = new Products();

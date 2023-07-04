@@ -5,7 +5,6 @@ session_start();
  */
 class Credentials
 {
-	
 	private $con;
 
 	function __construct()
@@ -14,7 +13,6 @@ class Credentials
 		$db = new Database();
 		$this->con = $db->connect();
 	}
-
 
 	public function createAdminAccount($name, $email, $password){
 		$q = $this->con->query("SELECT email FROM admin WHERE email = '$email'");
@@ -48,8 +46,6 @@ class Credentials
 
 }
 
-
-
 if (isset($_POST['admin_register'])) {
 	extract($_POST);
 	if (!empty($name) && !empty($email) && !empty($password) && !empty($cpassword)) {
@@ -80,6 +76,5 @@ if (isset($_POST['admin_login'])) {
 		exit();
 	}
 }
-
 
 ?>
