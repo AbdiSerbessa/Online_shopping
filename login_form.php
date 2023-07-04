@@ -20,6 +20,7 @@ if (isset($_POST["login_user_with_product"])) {
 		<meta charset="UTF-8">
 		<title> StoreApp | Login</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<!-- <link rel="stylesheet" type="text/css" href="css/login_reg.css"> -->
 		<script src="js/jquery2.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="main.js"></script>
@@ -74,6 +75,9 @@ if (isset($_POST["login_user_with_product"])) {
 		</div>
 		<div class="col-md-4"></div>
 	</div>
+	<!-- <script src="js/bootstrap.min.js"></script>
+	<script src="js/login_reg.js"></script>
+				<script src="js/actions.js"></script> -->
 </body>
 </html>
 
