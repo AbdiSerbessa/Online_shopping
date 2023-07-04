@@ -2,9 +2,7 @@
 include "db.php";
 include "header.php";
 ?>
-
 <style>
-
 .row-checkout {
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -71,12 +69,9 @@ label {
   cursor: pointer;
   font-size: 17px;
 }
-
 .checkout-btn:hover {
   background-color: #45a049;
 }
-
-
 
 hr {
   border: 1px solid lightgrey;
@@ -96,8 +91,6 @@ span.price {
   }
 }
 </style>
-
-
 <section class="section">
 	<div class="container-fluid">
 		<div class="row-checkout">
@@ -181,7 +174,6 @@ span.price {
 						";
 						$i++;
 					}
-
 				echo'
 				<input type="hidden" name="total_count" value="'.$total_count.'">
 					<input type="hidden" name="total_price" value="'.$total.'">
@@ -195,13 +187,10 @@ span.price {
 			echo"<script>window.location.href = 'cart.php'</script>";
 		}}
 		?>
-
 			<div class="col-25">
 				<div class="container-checkout">
-
 				<?php
 				if (isset($_POST["cmd"])) {
-
 					$user_id = $_POST['custom'];
 					$i=1;
 					echo
@@ -232,12 +221,10 @@ span.price {
 						$query = mysqli_query($con,$sql);
 						$row=mysqli_fetch_array($query);
 						$product_id=$row["product_id"];
-
 						echo "
 						<tr><td><p>$item_number_</p></td><td><p>$item_name_</p></td><td ><p>$quantity_</p></td><td ><p>$amount_</p></td></tr>";
 						$i++;
 					}
-
 				echo"
 				</tbody>
 				</table>
