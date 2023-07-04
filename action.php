@@ -119,15 +119,9 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 		}
 	}
 	if(isset($_POST["addToCart"])){
-
-
 		$p_id = $_POST["proId"];
-
-
 		if(isset($_SESSION["uid"])){
-
 		$user_id = $_SESSION["uid"];
-
 		$sql = "SELECT * FROM cart WHERE p_id = '$p_id' AND user_id = '$user_id'";
 		$run_query = mysqli_query($con,$sql);
 		$count = mysqli_num_rows($run_query);
@@ -321,8 +315,6 @@ if (isset($_POST["removeItemFromCart"])) {
 		exit();
 	}
 }
-
-
 //Update Item From cart
 if (isset($_POST["updateCartItem"])) {
 	$update_id = $_POST["update_id"];
@@ -340,10 +332,6 @@ if (isset($_POST["updateCartItem"])) {
 		exit();
 	}
 }
-
-
-
-
 ?>
 
 
