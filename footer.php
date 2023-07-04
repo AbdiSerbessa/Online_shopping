@@ -1,5 +1,115 @@
+<footer id="footer">
+		<style>
+		#toast {
+    visibility: hidden;
+    max-width: 50px;
+    height: 50px;
+    /*margin-left: -125px;*/
+    margin: auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+
+    position: fixed;
+    z-index: 10;
+    left: 0;right:0;
+	bottom:30px;
+    font-size: 17px;
+    white-space: nowrap;
+}
+#toast #img{
+width: 50px;
+height: 50px;
+
+    float: left;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    box-sizing: border-box;
+
+
+    background-color: #111;
+    color: #fff;
+}
+#toast #desc{
+
+
+    color: #fff;
+
+    padding: 16px;
+
+    overflow: hidden;
+white-space: nowrap;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes expand {
+    from {min-width: 50px}
+    to {min-width: 350px}
+}
+
+@keyframes expand {
+    from {min-width: 50px}
+    to {min-width: 350px}
+}
+@-webkit-keyframes stay {
+    from {min-width: 350px}
+    to {min-width: 350px}
+}
+
+@keyframes stay {
+    from {min-width: 350px}
+    to {min-width: 350px}
+}
+@-webkit-keyframes shrink {
+    from {min-width: 350px;}
+    to {min-width: 50px;}
+}
+
+@keyframes shrink {
+    from {min-width: 350px;}
+    to {min-width: 50px;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 60px; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 60px; opacity: 0;}
+}
+</style>
 <footer class="footer">
         <div class="container-fluid">
+        <div class="col-md-6 text-center" style="margin-top:80px;">
+							<ul class="footer-payments">
+								<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+								<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+							</ul>
+        </div>
           <div class="copyright float-right">
             &copy;
             <script>
@@ -14,157 +124,44 @@
   </div>
   <!--   Core JS Files   -->
   <script src="./js/jquery2.js"></script>
-  <script src=""></script>
-  <script async defer src=""></script>
-  <!--  Notifications Plugin    -->
-  <script src="./js/bootstrap-notify.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/jquery.zoom.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/actions.js"></script>
+		<script src="js/sweetalert.min"></script>
+		<script src="js/jquery.payform.min.js" charset="utf-8"></script>
   <script>
-    $(document).ready(function() {
-      $().ready(function() {
-        $sidebar = $('.sidebar');
+   var c = 0;
+        function menu(){
+          if(c % 2 == 0) {
+            document.querySelector('.cont_drobpdown_menu').className = "cont_drobpdown_menu active";
+            document.querySelector('.cont_icon_trg').className = "cont_icon_trg active";
+            c++;
+              }else{
+            document.querySelector('.cont_drobpdown_menu').className = "cont_drobpdown_menu disable";
+            document.querySelector('.cont_icon_trg').className = "cont_icon_trg disable";
+            c++;
+              }
+		}
 
-        $sidebar_img_container = $sidebar.find('.sidebar-background');
 
-        $full_page = $('.full-page');
+</script>
+    <script type="text/javascript">
+		$('.block2-btn-addcart').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
 
-        $sidebar_responsive = $('body > .navbar-collapse');
-
-        window_width = $(window).width();
-
-        $('.fixed-plugin a').click(function(event) {
-          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
-          if ($(this).hasClass('switch-trigger')) {
-            if (event.stopPropagation) {
-              event.stopPropagation();
-            } else if (window.event) {
-              window.event.cancelBubble = true;
-            }
-          }
-        });
-
-        $('.fixed-plugin .active-color span').click(function() {
-          $full_page_background = $('.full-page-background');
-
-          $(this).siblings().removeClass('active');
-          $(this).addClass('active');
-          var new_color = $(this).data('color');
-          if ($sidebar.length != 0) {
-            $sidebar.attr('data-color', new_color);
-          }
-          if ($full_page.length != 0) {
-            $full_page.attr('filter-color', new_color);
-          }
-          if ($sidebar_responsive.length != 0) {
-            $sidebar_responsive.attr('data-color', new_color);
-          }
-        });
-        $('.fixed-plugin .background-color .badge').click(function() {
-          $(this).siblings().removeClass('active');
-          $(this).addClass('active');
-          var new_color = $(this).data('background-color');
-          if ($sidebar.length != 0) {
-            $sidebar.attr('data-background-color', new_color);
-          }
-        });
-
-        $('.fixed-plugin .img-holder').click(function() {
-          $full_page_background = $('.full-page-background');
-          $(this).parent('li').siblings().removeClass('active');
-          $(this).parent('li').addClass('active');
-          var new_image = $(this).find("img").attr('src');
-          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
-            $sidebar_img_container.fadeOut('fast', function() {
-              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
-              $sidebar_img_container.fadeIn('fast');
-            });
-          }
-          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
-            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
-            $full_page_background.fadeOut('fast', function() {
-              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
-              $full_page_background.fadeIn('fast');
-            });
-          }
-          if ($('.switch-sidebar-image input:checked').length == 0) {
-            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
-            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
-
-            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
-            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
-          }
-
-          if ($sidebar_responsive.length != 0) {
-            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
-          }
-        });
-
-        $('.switch-sidebar-image input').change(function() {
-          $full_page_background = $('.full-page-background');
-
-          $input = $(this);
-
-          if ($input.is(':checked')) {
-            if ($sidebar_img_container.length != 0) {
-              $sidebar_img_container.fadeIn('fast');
-              $sidebar.attr('data-image', '#');
-            }
-
-            if ($full_page_background.length != 0) {
-              $full_page_background.fadeIn('fast');
-              $full_page.attr('data-image', '#');
-            }
-
-            background_image = true;
-          } else {
-            if ($sidebar_img_container.length != 0) {
-              $sidebar.removeAttr('data-image');
-              $sidebar_img_container.fadeOut('fast');
-            }
-
-            if ($full_page_background.length != 0) {
-              $full_page.removeAttr('data-image', '#');
-              $full_page_background.fadeOut('fast');
-            }
-
-            background_image = false;
-          }
-        });
-
-        $('.switch-sidebar-mini input').change(function() {
-          $body = $('body');
-
-          $input = $(this);
-
-          if (md.misc.sidebar_mini_active == true) {
-            $('body').removeClass('sidebar-mini');
-            md.misc.sidebar_mini_active = false;
-
-            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
-
-          } else {
-
-            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
-
-            setTimeout(function() {
-              $('body').addClass('sidebar-mini');
-
-              md.misc.sidebar_mini_active = true;
-            }, 300);
-          }
-
-          // we simulate the window Resize so the charts will get updated in realtime.
-          var simulateWindowResize = setInterval(function() {
-            window.dispatchEvent(new Event('resize'));
-          }, 180);
-
-          // we stop the simulation of Window Resize after the animations are completed
-          setTimeout(function() {
-            clearInterval(simulateWindowResize);
-          }, 1000);
-
-        });
-      });
-    });
-  </script>
-</body>
-</html>
+		$('.block2-btn-addwishlist').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+			});
+		});
+	</script>
