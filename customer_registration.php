@@ -11,6 +11,7 @@ if (isset($_GET["register"])) {
 		<script src="js/bootstrap.min.js"></script>
 		<script src="main.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/login_reg.css"> -->
 	</head>
 <body>
 <div class="wait overlay">
@@ -19,7 +20,7 @@ if (isset($_GET["register"])) {
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.php" class="navbar-brand">MyStore | OnlineShopping</a>
+				<a href="index.php" class="navbar-brand">Store | Online-Shopping</a>
 			</div>
 			<ul class="nav navbar-nav">
 				<li><a href="index.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
@@ -106,6 +107,9 @@ if (isset($_GET["register"])) {
 			<div class="col-md-2"></div>
 		</div>
 	</div>
+	<!-- <script src="js/bootstrap.min.js"></script>
+	<script src="js/login_reg.js"></script>
+				<script src="js/actions.js"></script> -->
 </body>
 </html>
 	<?php
