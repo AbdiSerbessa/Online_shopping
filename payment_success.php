@@ -6,7 +6,6 @@ if(!isset($_SESSION["uid"])){
 }
 
 if (isset($_GET["st"])) {
-
 	# code...
 	$trx_id = $_GET["tx"];
 		$p_st = $_GET["st"];
@@ -15,8 +14,6 @@ if (isset($_GET["st"])) {
 		$cm_user_id = $_GET["cm"];
 		$c_amt = $_COOKIE["ta"];
 	if ($p_st == "Completed") {
-
-
 
 		include_once("db.php");
 		$sql = "SELECT p_id,qty FROM cart WHERE user_id = '$cm_user_id'";
