@@ -23,7 +23,7 @@ if(!isset($_SESSION["uid"])){
 	</head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">	
+		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
 					<span class="sr-only"> navigation toggle</span>
@@ -31,7 +31,7 @@ if(!isset($_SESSION["uid"])){
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand">MyStore | OnlineShopping</a>
+				<a href="#" class="navbar-brand">Store | Online-Shopping</a>
 			</div>
 		<div class="collapse navbar-collapse" id="collapse">
 			<ul class="nav navbar-nav">
@@ -72,11 +72,11 @@ if(!isset($_SESSION["uid"])){
 						<li class="divider"></li>
 						<li><a href="customer_order.php" style="text-decoration:none; color:black;">Orders</a></li>
 						<li class="divider"></li>
-						
+
 						<li><a href="logout.php" style="text-decoration:none; color:black;">Logout</a></li>
 					</ul>
 				</li>
-				
+
 			</ul>
 		</div>
 	</div>
@@ -95,7 +95,7 @@ if(!isset($_SESSION["uid"])){
 				</div>
 
 			</div>
-			<div class="col-md-8">	
+			<div class="col-md-8">
 				<div class="row">
 					<div class="col-md-12 col-xs-12" id="product_msg">
 					</div>
@@ -104,7 +104,6 @@ if(!isset($_SESSION["uid"])){
 					<div class="panel-heading">Products</div>
 					<div class="panel-body">
 						<div id="get_product">
-
 					</div>
 					<div class="panel-footer">&copy; <?php echo date("Y"); ?></div>
 				</div>
