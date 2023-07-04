@@ -1,11 +1,8 @@
 <?php
 include "db.php";
-
 session_start();
-
 #Login script is begin here
 #If user given credential matches successfully with the data available in database then we will echo string login_success
-
 if(isset($_POST["email"]) && isset($_POST["password"])){
 	$email = mysqli_real_escape_string($con,$_POST["email"]);
 	$password = md5($_POST["password"]);
@@ -23,7 +20,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 				$p_list = stripcslashes($_COOKIE["product_list"]);
 				//here we are decoding stored json product list cookie to normal array
 				$product_list = json_decode($p_list,true);
-				for ($i=0; $i < count($product_list); $i++) { 
+				for ($i=0; $i < count($product_list); $i++) {
 					//After getting user id from database here we are checking user cart item if there is already product is listed or not
 					$verify_cart = "SELECT id FROM cart WHERE user_id = $_SESSION[uid] AND p_id = ".$product_list[$i];
 					$result  = mysqli_query($con,$verify_cart);
@@ -42,7 +39,6 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 				//if user is logging from after cart page we will send cart_login
 				echo "cart_login";
 				exit();
-				
 			}
 			//if user is login from page we will send login_success
 			echo "login_success";
@@ -51,7 +47,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 			echo "<span style='color:red;'>Please register before login..!</span>";
 			exit();
 		}
-	
+
 }
 
 ?>
