@@ -10,7 +10,7 @@ $(document).ready(function(){
 			data	:	{category:1},
 			success	:	function(data){
 				$("#get_category").html(data);
-				
+
 			}
 		})
 	}
@@ -36,14 +36,14 @@ $(document).ready(function(){
 			}
 		})
 	}
-	/*	when page is load successfully then there is a list of categories when user click on category we will get category id and 
+	/*	when page is load successfully then there is a list of categories when user click on category we will get category id and
 		according to id we will show products
 	*/
 	$("body").delegate(".category","click",function(event){
 		$("#get_product").html("<h3>Loading...</h3>");
 		event.preventDefault();
 		var cid = $(this).attr('cid');
-		
+
 			$.ajax({
 			url		:	"action.php",
 			method	:	"POST",
@@ -55,17 +55,17 @@ $(document).ready(function(){
 				}
 			}
 		})
-	
+
 	})
 
-	/*	when page is load successfully then there is a list of brands when user click on brand we will get brand id and 
+	/*	when page is load successfully then there is a list of brands when user click on brand we will get brand id and
 		according to brand id we will show products
 	*/
 	$("body").delegate(".selectBrand","click",function(event){
 		event.preventDefault();
 		$("#get_product").html("<h3>Loading...</h3>");
 		var bid = $(this).attr('bid');
-		
+
 			$.ajax({
 			url		:	"action.php",
 			method	:	"POST",
@@ -77,12 +77,12 @@ $(document).ready(function(){
 				}
 			}
 		})
-	
+
 	})
 	/*
-		At the top of page there is a search box with search button when user put name of product then we will take the user 
-		given string and with the help of sql query we will match user given string to our database keywords column then matched product 
-		we will show 
+		At the top of page there is a search box with search button when user put name of product then we will take the user
+		given string and with the help of sql query we will match user given string to our database keywords column then matched product
+		we will show
 	*/
 	$("#search_btn").click(function(){
 		$("#get_product").html("<h3>Loading...</h3>");
@@ -92,7 +92,7 @@ $(document).ready(function(){
 			url		:	"action.php",
 			method	:	"POST",
 			data	:	{search:1,keyword:keyword},
-			success	:	function(data){ 
+			success	:	function(data){
 				$("#get_product").html(data);
 				if($("body").width() < 480){
 					$("body").scrollTop(683);
@@ -107,7 +107,7 @@ $(document).ready(function(){
 	/*
 		Here #login is login form id and this form is available in index.php page
 		from here input data is sent to login.php page
-		if you get login_success string from login.php page means user is logged in successfully and window.location is 
+		if you get login_success string from login.php page means user is logged in successfully and window.location is
 		used to redirect user from home page to profile.php page
 	*/
 	$("#login").on("submit",function(event){
@@ -146,7 +146,7 @@ $(document).ready(function(){
 				}else{
 					$("#signup_msg").html(data);
 				}
-				
+
 			}
 		})
 	})
@@ -219,10 +219,10 @@ $(document).ready(function(){
 		$('.net_total').html("Total : $ " +net_total);
 
 	})
-	//Change Quantity end here 
+	//Change Quantity end here
 
 	/*
-		whenever user click on .remove class we will take product id of that row 
+		whenever user click on .remove class we will take product id of that row
 		and send it to action.php to perform product removal operation
 	*/
 	$("body").delegate(".remove","click",function(event){
@@ -239,7 +239,7 @@ $(document).ready(function(){
 		})
 	})
 	/*
-		whenever user click on .update class we will take product id of that row 
+		whenever user click on .update class we will take product id of that row
 		and send it to action.php to perform product qty updation operation
 	*/
 	$("body").delegate(".update","click",function(event){
@@ -255,8 +255,6 @@ $(document).ready(function(){
 				checkOutDetails();
 			}
 		})
-
-
 	})
 	checkOutDetails();
 	net_total();
