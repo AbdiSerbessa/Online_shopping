@@ -9,29 +9,21 @@ session_start();
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
 		<title>Online Shopping</title>
-
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet"/>
-
 		<!-- Bootstrap -->
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
-
 		<!-- Slick -->
 		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
 		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
-
 		<!-- nouislider -->
 		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
-
 		<!-- Font Awesome Icon -->
 		<link rel="stylesheet" href="css/font-awesome.min.css">
-
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<link type="text/css" rel="stylesheet" href="css/accountbtn.css"/>
-
     <style>
         #navigation {
           background: #FF4E50;  /* fallback for old browsers */
@@ -158,9 +150,7 @@ session_start();
 						<div class="col-md-3 clearfix">
 							<div class="header-ctn">
 								<!-- Wishlist -->
-
 								<!-- /Wishlist -->
-
 								<!-- Cart -->
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
@@ -178,7 +168,6 @@ session_start();
 									</div>
 									</div>
 								<!-- /Cart -->
-
 								<!-- Menu Toogle -->
 								<div class="menu-toggle">
 									<a href="#">
@@ -210,23 +199,17 @@ session_start();
                             <div class="modal-body">
                             <?php
                                 include "login_form.php";
-
                             ?>
-
                             </div>
-
                           </div>
-
                         </div>
                       </div>
                 <div class="modal fade" id="Modal_register" role="dialog">
                         <div class="modal-dialog" >
-
                           <!-- Modal content-->
                           <div class="modal-content">
                             <div class="modal-header">
                               <button type="button" class="close" data-dismiss="modal">&times;</button>
-
                             </div>
                             <div class="modal-body">
                             <?php
