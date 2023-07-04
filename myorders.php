@@ -10,7 +10,6 @@ include "header.php";
             <div class="heading cf">
                 <h1>My Orders</h1>
                 <h1 style="margin-left:55%">qty</h1>
-                <a href="store.php" class="continue">Continue Shopping</a>
             </div>
             <div class="cart">
                 <ul class="cartWrap">
