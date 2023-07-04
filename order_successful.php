@@ -1,12 +1,9 @@
 <?php
-
 session_start();
 if(!isset($_SESSION["uid"])){
 	header("location:index.php");
 }
-
 if (isset($_GET["st"])) {
-
 	# code...
 	$trx_id = $_GET["tx"];
 		$p_st = $_GET["st"];
@@ -15,9 +12,6 @@ if (isset($_GET["st"])) {
 		$cm_user_id = $_GET["cm"];
 		$c_amt = $_COOKIE["ta"];
 	if ($p_st == "Completed") {
-
-
-
 		include_once("db.php");
 		$sql = "SELECT p_id,qty FROM cart WHERE user_id = '$cm_user_id'";
 		$query = mysqli_query($con,$sql);
@@ -27,7 +21,6 @@ if (isset($_GET["st"])) {
 			$product_id[] = $row["p_id"];
 			$qty[] = $row["qty"];
 			}
-
 			for ($i=0; $i < count($product_id); $i++) {
 				$sql = "INSERT INTO orders (user_id,product_id,qty,trx_id,p_status) VALUES ('$cm_user_id','".$product_id[$i]."','".$qty[$i]."','$trx_id','$p_st')";
 				mysqli_query($con,$sql);
@@ -96,9 +89,6 @@ if (isset($_GET["st"])) {
 
 	}
 }
-
-
-
 ?><html>
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
@@ -178,7 +168,7 @@ if (isset($_GET["st"])) {
 			<i class="checkmark">✓</i>
 		</div>
 			<h1>Your order placed Successfully</h1>
-			<p>We received your purchase request;<br/> we'll be in touch with you shortly!</p>
+			<p>We received your purchase request;<br/> We'll be in touch with you shortly!</p>
 		</div>
 	</body>
 </html>
