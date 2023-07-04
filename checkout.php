@@ -100,7 +100,7 @@ span.price {
 			$query = mysqli_query($con,$sql);
 			if(mysqli_num_rows($query) > 0){
 			$row=mysqli_fetch_array($query);
-		echo'
+		echo '
 			<div class="col-75">
 				<div class="container-checkout">
 				<form id="checkout_form" action="checkout_process.php" method="POST" class="was-validated">
@@ -157,6 +157,9 @@ span.price {
 					</label>';
 					$i=1;
 					$total=0;
+					$total_count = 0;
+					$your_array = array();
+					if (isset($your_array) && array_key_exists('total_count', $your_array)){
 					$total_count=$_POST['total_count'];
 					while($i<=$total_count){
 						$item_name_ = $_POST['item_name_'.$i];
@@ -174,6 +177,7 @@ span.price {
 						";
 						$i++;
 					}
+				}
 				echo'
 				<input type="hidden" name="total_count" value="'.$total_count.'">
 					<input type="hidden" name="total_price" value="'.$total.'">
