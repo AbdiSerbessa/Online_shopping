@@ -1,6 +1,5 @@
 <footer class="footer">
         <div class="container-fluid">
-
           <div class="copyright float-right">
             &copy;
             <script>
@@ -48,28 +47,21 @@
 
           $(this).siblings().removeClass('active');
           $(this).addClass('active');
-
           var new_color = $(this).data('color');
-
           if ($sidebar.length != 0) {
             $sidebar.attr('data-color', new_color);
           }
-
           if ($full_page.length != 0) {
             $full_page.attr('filter-color', new_color);
           }
-
           if ($sidebar_responsive.length != 0) {
             $sidebar_responsive.attr('data-color', new_color);
           }
         });
-
         $('.fixed-plugin .background-color .badge').click(function() {
           $(this).siblings().removeClass('active');
           $(this).addClass('active');
-
           var new_color = $(this).data('background-color');
-
           if ($sidebar.length != 0) {
             $sidebar.attr('data-background-color', new_color);
           }
@@ -77,29 +69,22 @@
 
         $('.fixed-plugin .img-holder').click(function() {
           $full_page_background = $('.full-page-background');
-
           $(this).parent('li').siblings().removeClass('active');
           $(this).parent('li').addClass('active');
-
-
           var new_image = $(this).find("img").attr('src');
-
           if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
             $sidebar_img_container.fadeOut('fast', function() {
               $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
               $sidebar_img_container.fadeIn('fast');
             });
           }
-
           if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
             var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
-
             $full_page_background.fadeOut('fast', function() {
               $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
               $full_page_background.fadeIn('fast');
             });
           }
-
           if ($('.switch-sidebar-image input:checked').length == 0) {
             var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
             var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
@@ -182,5 +167,4 @@
     });
   </script>
 </body>
-
 </html>
