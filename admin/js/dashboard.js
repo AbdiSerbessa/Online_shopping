@@ -6,9 +6,10 @@
   feather.replace()
 
   // Graphs
-  var ctx = document.getElementById('myChart')
-
-  var myChart = new Chart(ctx, {
+  window.onload = function() {
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+  var chart = new chart(ctx, {
     type: 'line',
     data: {
       labels: [
@@ -49,5 +50,5 @@
         display: false
       }
     }
-  })
+  })};
 }())
