@@ -9,7 +9,7 @@ if(!isset($_SESSION["uid"])){
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>MyStoreApp | Customer-Order</title>
+		<title>StoreApp | Customer-Order</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<script src="js/jquery2.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -22,7 +22,7 @@ if(!isset($_SESSION["uid"])){
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="#" class="navbar-brand">MyStore | OnlineShopping/a>
+				<a href="#" class="navbar-brand">Store | OnlineShopping/a>
 			</div>
 			<ul class="nav navbar-nav">
 				<li><a href="index.php"><span class="glyphicon glyphicon-home"></span>Home</a></li>
