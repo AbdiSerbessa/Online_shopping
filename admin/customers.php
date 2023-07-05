@@ -42,7 +42,7 @@ mysqli_query($con,"delete from user_info where user_id='$user_id'")or die("query
                     </tr></thead>
                     <tbody>
                       <?php
-                        $result=mysqli_query($con,"select user_id,first_name,last_name, email, password,mobile,address1,address2 from user_info")or die ("query 2 incorrect.......");
+                        $result=mysqli_query($con,"select user_id,first_name,last_name, email, password,mobile,address1,address2 from user_info")or die ("query 2 incorrect....");
 
                         while(list($user_id,$user_name,$user_last,$email,$user_password,$mobile,$address1,$address2)=
                         mysqli_fetch_array($result))
