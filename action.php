@@ -285,9 +285,9 @@ if (isset($_POST["Common"])) {
 								     <input type="hidden" name="quantity_'.$x.'" value="'.$row["qty"].'">';
 								}
 							echo
-								'<input type="hidden" name="return" value="http://localhost/onlineshopping/payment_success.php"/>
-					                <input type="hidden" name="notify_url" value="http://localhost/onlineshopping/payment_success.php">
-									<input type="hidden" name="cancel_return" value="http://localhost/onlineshopping/cancel.php"/>
+								'<input type="hidden" name="return" value="http://localhost/online_shopping/payment_success.php"/>
+					                <input type="hidden" name="notify_url" value="http://localhost/online_shopping/payment_success.php">
+									<input type="hidden" name="cancel_return" value="http://localhost/online_shopping/cancel.php"/>
 									<input type="hidden" name="currency_code" value="eth"/>
 									<input type="hidden" name="custom" value="'.$_SESSION["uid"].'"/>
 									<input style="float:right;margin-right:80px;" type="image" name="submit" class="btn btn-success" value="Ready to Checkout">
