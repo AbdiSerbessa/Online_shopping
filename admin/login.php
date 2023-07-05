@@ -1,6 +1,8 @@
 <?php include "./templates/top.php"; ?>
 
 <?php include "./templates/navbar.php"; ?>
+<?php include("./server.php"); ?>
+
 
 <div class="container">
 	<div class="row justify-content-center" style="margin:100px 0;">
@@ -11,7 +13,7 @@
 			  <div class="form-group">
 			    <label for="email">Email address</label>
 			    <input type="email" class="form-control" name="email" id="email"  placeholder="Enter email">
-			    
+
 			  </div>
 			  <div class="form-group">
 			    <label for="password">Password</label>
