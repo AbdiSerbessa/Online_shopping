@@ -9,7 +9,7 @@ $errors = array();
 
 // connect to the database
 define('DB_SERVER', 'localhost');
-   define('DB_USERNAME', 'supportReddy');
+   define('DB_USERNAME', 'root');
    define('DB_PASSWORD', '');
    define('DB_DATABASE', 'ecommereceapp');
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
@@ -39,7 +39,6 @@ if (isset($_POST['reg_user'])) {
   $user_check_query = "SELECT * FROM register WHERE Name='$username' OR email='$email' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
-
   if ($user) { // if user exists
     if ($user['Name'] === $username) {
       array_push($errors, "Username already exists");
