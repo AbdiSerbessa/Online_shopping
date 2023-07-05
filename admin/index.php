@@ -1,13 +1,12 @@
 <?php
 session_start();
+include ("../db.php");
 if (!isset($_SESSION['admin_id'])) {
   header("location:login.php");
 }
-
 include "./templates/top.php";
 
 ?>
-
 <?php include "./templates/navbar.php"; ?>
 
 <div class="container-fluid">
