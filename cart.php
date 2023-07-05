@@ -1,17 +1,13 @@
 <?php
+
 require "config/constants.php";
+
 ?>
-<section class="section">
-<div class="container-fluid">
-    <div id="cart_checkout">
-    </div>
-</div>
-</section>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Store App | Cart</title>
+		<title>MyStoreApp | Cart</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<script src="js/jquery2.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -31,7 +27,7 @@ require "config/constants.php";
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand">Store | OnlineShopping</a>
+				<a href="#" class="navbar-brand">MyStore | OnlineShopping</a>
 			</div>
 		<div class="collapse navbar-collapse" id="collapse">
 			<ul class="nav navbar-nav">
@@ -67,21 +63,22 @@ require "config/constants.php";
 							<div class="col-md-2 col-xs-2"><b>Price in <?php echo CURRENCY; ?></b></div>
 						</div>
 						<div id="cart_checkout"></div>
+
 						</div>
 					</div>
 					<div class="panel-footer"></div>
 				</div>
 			</div>
 			<div class="col-md-2"></div>
+
 		</div>
+
 <script>var CURRENCY = '<?php echo CURRENCY; ?>';</script>
 </body>
 </html>
 
 
-<?php
-include "footer.php";
-?>
+
 
 
 
